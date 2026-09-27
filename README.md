@@ -1,3 +1,5 @@
+You can access the project at https://izzyh-gif.github.io/Gong%20chat/
+
 # Gong Chat Backend
 
 The Gong Chat backend is a small Flask service that helps a static GitHub Pages frontend recommend a Gong cha drink. It keeps the OpenAI API key on the server, supplies the model with a categorized starter catalog, validates incoming chat data, and returns assistant replies as JSON.
