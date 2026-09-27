@@ -1,0 +1,16 @@
+# Render Blueprint for the Gong cha backend.
+# Configure OPENAI_API_KEY and ALLOWED_ORIGINS in the Render dashboard.
+services:
+  - type: web
+    name: gong-chat-backend
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --bind 0.0.0.0:$PORT app:app
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: ALLOWED_ORIGINS
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-4o-mini
+    plan: free
